@@ -4,6 +4,7 @@ import com.android.build.gradle.BaseExtension
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 
+@Suppress("UnstableApiUsage")
 internal fun Project.configureJetpackCompose(
     baseExtension: BaseExtension?
 ) {

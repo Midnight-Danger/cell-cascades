@@ -4,7 +4,6 @@ import extensions.androidTestImplementation
 import extensions.testImplementation
 import extensions.vcBundle
 import extensions.vcLibrary
-import extensions.versionCatalog
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies

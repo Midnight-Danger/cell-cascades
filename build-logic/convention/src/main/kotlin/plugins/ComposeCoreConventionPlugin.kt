@@ -1,7 +1,6 @@
 package plugins
 
 import extensions.androidExtension
-import extensions.applicationExtension
 import extensions.configureJetpackCompose
 import org.gradle.api.Plugin
 import org.gradle.api.Project
