@@ -31,6 +31,10 @@ gradlePlugin {
             id = "compose-core"
             implementationClass = "plugins.ComposeCoreConventionPlugin"
         }
+        register("timber-logger") {
+            id = "logger"
+            implementationClass = "plugins.LoggerConventionPlugin"
+        }
         register("unitTests"){
             id = "unit-tests"
             implementationClass = "plugins.UnitTestConventionPlugin"
