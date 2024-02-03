@@ -13,8 +13,10 @@ class AppLibraryConventionPlugin: Plugin<Project> {
     override fun apply(project: Project) {
         with(project) {
             // Apply Gradle & Kotlin plugins
-            apply(versionCatalog().findPlugin("library").get())
-            apply(versionCatalog().findPlugin("kotlin-android").get())
+            with(pluginManager) {
+                apply("com.android.library")
+                apply("org.jetbrains.kotlin.android")
+            }
 
             extensions.configure<LibraryExtension> {
                 defaultConfig.apply {
