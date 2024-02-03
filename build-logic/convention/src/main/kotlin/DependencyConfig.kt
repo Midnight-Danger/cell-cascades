@@ -7,4 +7,5 @@ object DependencyConfig {
     const val ANDROID_TEST_IMP = "androidTestImplementation"
     const val PATH = "path"
     const val KSP = "ksp"
+    const val ANDROID = "android"
 }

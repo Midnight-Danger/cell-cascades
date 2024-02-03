@@ -19,6 +19,9 @@ internal val Project.applicationExtension: ApplicationExtension
 internal val Project.libraryExtension: LibraryExtension
     get() = extensions.getByType<LibraryExtension>()
 
+internal val Project.androidExtension
+    get() = project.extensions.getByName(DependencyConfig.ANDROID) as? BaseExtension
+
 internal fun Project.vcVersion(alias: String): VersionConstraint {
     return versionCatalog().findVersion(alias).get()
 }
@@ -30,9 +33,6 @@ internal fun Project.vcLibrary(alias: String): Provider<MinimalExternalModuleDep
 internal fun Project.vcBundle(alias: String): Provider<ExternalModuleDependencyBundle> {
     return versionCatalog().findBundle(alias).get()
 }
-
-internal val Project.androidExtension
-    get() = project.extensions.getByName("android") as? BaseExtension
 
 internal fun DependencyHandlerScope.implementation(dependency: Any) {
     add(DependencyConfig.IMPL, dependency)
