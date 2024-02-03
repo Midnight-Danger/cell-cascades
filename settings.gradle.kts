@@ -16,4 +16,11 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Cell Cascades"
+
+// App Module
 include(":app")
+
+// Base Modules
+include(
+    ":base-modules:neumorphic-design-system",
+)

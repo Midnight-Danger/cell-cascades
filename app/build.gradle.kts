@@ -10,5 +10,9 @@ android {
 }
 
 dependencies {
+    with(Modules.Base) {
+        implementation(project(neumorphicDesignSystem))
+    }
+
     debugImplementation(libs.leak.canary)
 }
