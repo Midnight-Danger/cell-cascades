@@ -1,6 +1,7 @@
 package plugins
 
 import com.android.build.api.dsl.ApplicationExtension
+import extensions.androidExtension
 import extensions.configureJetpackCompose
 import extensions.versionCatalog
 import org.gradle.api.Plugin
@@ -11,9 +12,7 @@ class ComposeCoreConventionPlugin: Plugin<Project> {
 
     override fun apply(project: Project) {
         with(project) {
-            pluginManager.apply("com.android.application")
-            val extension = extensions.getByType<ApplicationExtension>()
-            configureJetpackCompose(extension)
+            configureJetpackCompose(androidExtension)
         }
     }
 }

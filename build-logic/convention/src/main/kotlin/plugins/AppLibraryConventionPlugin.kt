@@ -2,6 +2,7 @@ package plugins
 
 import com.android.build.api.dsl.LibraryExtension
 import extensions.configureAndroidKotlin
+import extensions.libraryExtension
 import extensions.versionCatalog
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -18,7 +19,7 @@ class AppLibraryConventionPlugin: Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
             }
 
-            extensions.configure<LibraryExtension> {
+            libraryExtension.apply {
                 defaultConfig.apply {
                     minSdk = ProjectConfig.minSdk
                 }
