@@ -9,38 +9,29 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import com.midnight.danger.cellcascades.ui.theme.CellCascadesTheme
+import com.midnight.danger.neumorphicdesignsystem.components.surface.NDSScaffold
+import com.midnight.danger.neumorphicdesignsystem.theme.NeumorphicDesignTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CellCascadesTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
+            NeumorphicDesignTheme {
+                NDSScaffold {
+                    Text(text = "Hello Neumorphism")
                 }
             }
         }
     }
 }
 
+@Preview(showSystemUi = true, showBackground = true, device = Devices.PIXEL_7_PRO)
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CellCascadesTheme {
-        Greeting("Android")
+fun MainScreenPreview() {
+    NDSScaffold {
+        Text(text = "Hello Neumorphism")
     }
 }
