@@ -1,13 +1,12 @@
 package plugins
 
 import ProjectConfig
-import com.android.build.api.dsl.ApplicationExtension
+import extensions.applicationExtension
 import extensions.configureAndroidKotlin
 import extensions.configureBuildTypes
 import extensions.configureProductFlavors
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.configure
 
 class AppCoreConventionPlugin: Plugin<Project> {
 
@@ -19,7 +18,7 @@ class AppCoreConventionPlugin: Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
             }
 
-            extensions.configure<ApplicationExtension> {
+            applicationExtension.apply {
                 defaultConfig.apply {
                     minSdk = ProjectConfig.minSdk
                     targetSdk = ProjectConfig.targetSdk

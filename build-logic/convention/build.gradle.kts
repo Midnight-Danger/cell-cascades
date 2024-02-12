@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     `kotlin-dsl`
 }
@@ -30,6 +28,10 @@ gradlePlugin {
         register("composeCore"){
             id = "compose-core"
             implementationClass = "plugins.ComposeCoreConventionPlugin"
+        }
+        register("timber-logger") {
+            id = "logger"
+            implementationClass = "plugins.LoggerConventionPlugin"
         }
         register("unitTests"){
             id = "unit-tests"

@@ -1,5 +1,9 @@
 package plugins
 
+import extensions.androidTestImplementation
+import extensions.testImplementation
+import extensions.vcBundle
+import extensions.vcLibrary
 import extensions.versionCatalog
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -11,8 +15,8 @@ class UnitTestConventionPlugin: Plugin<Project> {
         with(project) {
             dependencies {
                 // Core test dependencies
-                add("testImplementation", versionCatalog().findLibrary("junit").get())
-                add("androidTestImplementation", versionCatalog().findBundle("androidTests").get())
+                testImplementation(vcLibrary("junit"))
+                androidTestImplementation(vcBundle("androidTests"))
             }
         }
     }

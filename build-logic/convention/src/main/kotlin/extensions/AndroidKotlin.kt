@@ -26,10 +26,10 @@ internal fun Project.configureAndroidKotlin(
         packaging.resources.excludes += "/META-INF/{AL2.0,LGPL2.1}"
 
         dependencies {
-            add("coreLibraryDesugaring", versionCatalog().findLibrary("desugar").get())
+            coreLibraryDesugaring(vcLibrary("desugar"))
             // Android core dependencies
-            add("implementation", versionCatalog().findLibrary("android-core-ktx").get())
-            add("implementation", versionCatalog().findLibrary("android-lifecycle-runtime-ktx").get())
+            implementation(vcLibrary("android-core-ktx"))
+            implementation(vcLibrary("android-lifecycle-runtime-ktx"))
         }
     }
     tasks.withType<KotlinCompile>().configureEach {
