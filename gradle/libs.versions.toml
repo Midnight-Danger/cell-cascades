@@ -9,8 +9,9 @@ compose-compiler = "1.5.7"
 desugar = "2.0.4"
 core-ktx = "1.12.0" #android core
 lifecycle-runtime-ktx = "2.7.0" #android lifecycle
-compose-bom = "2024.01.00"
+compose-bom = "2024.02.00"
 compose-activity = "1.8.2"
+compose-destinations = "1.10.0"
 
 leak-canary = "2.13"
 timber = "5.0.1"
@@ -41,6 +42,8 @@ compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview"
 compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 compose-material3 = { module = "androidx.compose.material3:material3" }
 compose-activity = { module = "androidx.activity:activity-compose", version.ref = "compose-activity" }
+compose-destinations = { module = "io.github.raamcosta.compose-destinations:animations-core", version.ref = "compose-destinations" }
+compose-destinations-ksp = { module = "io.github.raamcosta.compose-destinations:ksp", version.ref = "compose-destinations" }
 ## tooling
 leak-canary = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leak-canary" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }

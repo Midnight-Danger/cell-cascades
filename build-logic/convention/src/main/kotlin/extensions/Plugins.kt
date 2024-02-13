@@ -34,6 +34,10 @@ internal fun Project.vcBundle(alias: String): Provider<ExternalModuleDependencyB
 internal val Project.androidExtension
     get() = project.extensions.getByName("android") as? BaseExtension
 
+internal fun DependencyHandlerScope.ksp(dependency: Any) {
+    add(DependencyConfig.KSP, dependency)
+}
+
 internal fun DependencyHandlerScope.implementation(dependency: Any) {
     add(DependencyConfig.IMPL, dependency)
 }

@@ -16,6 +16,8 @@ internal fun Project.configureJetpackCompose(
         dependencies {
             implementation(platform(vcLibrary("compose-bom")))
             implementation(vcBundle("compose"))
+            implementation(vcLibrary("compose-destinations"))
+
             debugImplementation(vcBundle("compose-tooling"))
             androidTestImplementation(platform(vcLibrary("compose-bom")))
         }
