@@ -10,5 +10,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":feature-modules:home"))
+    implementation(project(":feature-modules:settings"))
+
     debugImplementation(libs.leak.canary)
 }

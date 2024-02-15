@@ -16,4 +16,11 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Cell Cascades"
+// App Module
 include(":app")
+
+// Feature Modules
+include(
+    ":feature-modules:home",
+    ":feature-modules:settings"
+)
